@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Di tích Hải Phòng</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f2f2f2;
+}
+
+/* HEADER */
+
+header{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* MENU */
+
+nav{
+background:#001f3f;
+position:sticky;
+top:0;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav ul li{
+margin:10px 20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+nav ul li a:hover{
+color:yellow;
+}
+
+/* SLIDER */
+
+.slider{
+width:100%;
+height:350px;
+overflow:hidden;
+position:relative;
+}
+
+.slider img{
+width:100%;
+height:350px;
+object-fit:cover;
+display:none;
+}
+
+.slider img.active{
+display:block;
+}
+
+/* CONTAINER */
+
+.container{
+width:90%;
+margin:auto;
+padding:30px 0;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.place{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.place:hover{
+transform:scale(1.05);
+}
+
+.place img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.place h3{
+text-align:center;
+padding:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.1);
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:300px;
+border:none;
+margin:15px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:#001f3f;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Website Giới Thiệu Di Tích Hải Phòng</h1>
+<p>Đồ án thực hành Tin học 12</p>
+</header>
+
+<nav>
+
+<ul>
+<li><a href="#">Trang chủ</a></li>
+<li><a href="#heritage">Di tích</a></li>
+<li><a href="#gallery">Thư viện ảnh</a></li>
+<li><a href="#map">Bản đồ</a></li>
+</ul>
+
+</nav>
+
+<!-- SLIDER -->
+
+<div class="slider">
+
+<img class="active" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Den_Nghe_Hai_Phong.jpg/800px-Den_Nghe_Hai_Phong.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Chua_Du_Hang.jpg/800px-Chua_Du_Hang.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tuong_Long_Tower.jpg/800px-Tuong_Long_Tower.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Do_Son_beach_Hai_Phong.jpg/800px-Do_Son_beach_Hai_Phong.jpg">
+
+</div>
+
+<div class="container">
+
+<h2>Giới thiệu</h2>
+
+<p>
+Hải Phòng là thành phố cảng lớn của Việt Nam với nhiều di tích lịch sử,
+văn hóa và kiến trúc nổi tiếng. Những di tích này phản ánh quá trình
+hình thành và phát triển của vùng đất Hải Phòng qua nhiều thời kỳ.
+</p>
+
+<br>
+
+<h2 id="heritage">Các di tích nổi bật</h2>
+
+<div class="grid">
+
+<div class="place">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Den_Nghe_Hai_Phong.jpg/800px-Den_Nghe_Hai_Phong.jpg">
+<h3>Đền Nghè</h3>
+</div>
+
+<div class="place">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Chua_Du_Hang.jpg/800px-Chua_Du_Hang.jpg">
+<h3>Chùa Dư Hàng</h3>
+</div>
+
+<div class="place">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tuong_Long_Tower.jpg/800px-Tuong_Long_Tower.jpg">
+<h3>Tháp Tường Long</h3>
+</div>
+
+<div class="place">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Do_Son_beach_Hai_Phong.jpg/800px-Do_Son_beach_Hai_Phong.jpg">
+<h3>Khu du lịch Đồ Sơn</h3>
+</div>
+
+</div>
+
+<br><br>
+
+<h2 id="gallery">Thư viện ảnh</h2>
+
+<div class="gallery">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Den_Nghe_Hai_Phong.jpg/800px-Den_Nghe_Hai_Phong.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Chua_Du_Hang.jpg/800px-Chua_Du_Hang.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tuong_Long_Tower.jpg/800px-Tuong_Long_Tower.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Do_Son_beach_Hai_Phong.jpg/800px-Do_Son_beach_Hai_Phong.jpg">
+
+</div>
+
+<br><br>
+
+<h2 id="map">Bản đồ các di tích</h2>
+
+<h3>Đền Nghè</h3>
+
+<iframe
+src="https://www.google.com/maps?q=Den+Nghe+Hai+Phong&output=embed">
+</iframe>
+
+<h3>Chùa Dư Hàng</h3>
+
+<iframe
+src="https://www.google.com/maps?q=Chua+Du+Hang+Hai+Phong&output=embed">
+</iframe>
+
+<h3>Tháp Tường Long</h3>
+
+<iframe
+src="https://www.google.com/maps?q=Thap+Tuong+Long+Do+Son&output=embed">
+</iframe>
+
+</div>
+
+<footer>
+
+<p>© 2026 Website Di tích Hải Phòng</p>
+<p>Thiết kế: Nguyễn Duy Anh</p>
+
+</footer>
+
+<script>
+
+/* SLIDER AUTO */
+
+let slides=document.querySelectorAll(".slider img");
+
+let index=0;
+
+function slide(){
+
+slides[index].classList.remove("active");
+
+index++;
+
+if(index>=slides.length){
+
+index=0;
+
+}
+
+slides[index].classList.add("active");
+
+}
+
+setInterval(slide,3000);
+
+</script>
+
+</body>
+
+  </html>
